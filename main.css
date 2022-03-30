@@ -21,3 +21,11 @@ menu button {
 .carousel-inner {
     max-height: 25rem;;
 }
+
+.slide {
+    margin-top: 10px;
+}
+
+.slide img {
+    height: 65vh;
+}
