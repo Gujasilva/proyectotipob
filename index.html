@@ -17,17 +17,18 @@
 
     <!----- Encabezado------>
 
-    <header class="container-fluid bg-info 
+    <header class="container-fluid bg-success 
     d-flex justify-content-center">
         <p class="text-light mb-0">
-          Contacto al 000
+          Contactanos llamando al 600 786 830200
         </p>
     </header>
 
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-              <span class="text-primary fw-bold"><img src="./imagenes/iconopag.png" alt="Logo Tierra" width="auto" height="50">               Nuevas Tierras</span> 
+          <a class="navbar-brand" href="./index.html">
+              <span class="text-primary fw-bold"><img src="./articulo/imagenes/iconopag.png" alt="Logo Tierra" width="auto" height="80">               Nuevas Tierras</span> 
               <!-- fw-bold = remarcar en negro la letra-->
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,10 +37,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               
-                <!---------- Inicio de la lista ------->
+                <!---------- Inicio de la lista Nav ------->
 
                 <li class="nav-item"> 
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
               </li>
 
               <li class="nav-item dropdown">
@@ -73,15 +74,18 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Huerto</a></li>
-                  <li><a class="dropdown-item" href="#">Flores</a></li>
+                  <li><a class="dropdown-item" href="./articulo/prodcuto/flores.html">Flores</a></li>
                   <li><a class="dropdown-item" href="#">Pasto</a></li>
                 </ul>
               </li>
 
-            <form class="d-flex">
-              <input class="form-control me-2" type="email" placeholder="Correo" aria-label="email">
-              <button class="btn btn-outline-success" type="submit">Suscribete</button>
-            </form>
+              <li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Maseteros</a>
+                </li>
+              </li>
+              
+
             </ul>
           </div>
         </div>
@@ -95,15 +99,15 @@
         <div class="carousel-inner">
 
           <div class="carousel-item active">
-            <img src="./imagenes/imagen1.jpg" class="img-fluid img-thumbnail" alt="slide1">
+            <img src="./articulo/imagenes/imagen1.jpg" class="img-fluid img-thumbnail" alt="slide1">
           </div>
 
           <div class="carousel-item">
-            <img src="./imagenes/imagen3.jpg" class="img-fluid img-thumbnail" alt="slide2">
+            <img src="./articulo/imagenes/imagen3.jpg" class="img-fluid img-thumbnail" alt="slide2">
           </div>
 
           <div class="carousel-item">
-            <img src="./imagenes/imagen2.png" class="img-fluid img-thumbnail" alt="slide3">
+            <img src="./articulo/imagenes/imagen2.png" class="img-fluid img-thumbnail" alt="slide3">
           </div>
         </div>
 
@@ -120,10 +124,79 @@
       <section class="w-30 mx-auto text-center pt-5" id="intro">  <!--pt-5 es el borde arriba(top) entre el texto y el slider/remarcado con linea-->
         <!------- mx es para dar MARGEN a (X)ambos lados,--------->
           <h2 class="p-3 fs-2 border-top border-2">  <!--fs = font zise o texto en bt--> 
-             <span class="text-primary">PLANTAS</span>
-        </h2>
-        <p>Tierra</p>
+             <span class="text-primary">Lo mas destacado</span>
+            </h2>
 
+      <!--IMAGENES BAJA Grid-->
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./articulo/imagenes/tijeras.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Herramienta</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./articulo/imagenes/huerto.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Huerto</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./articulo/imagenes/profesi.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Profesional</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./articulo/imagenes/maceteros.png" class="card-img-top" alt="Maceteros">
+        <div class="card-body">
+          <a href="./articulo/prodcuto/maceteros.html" class="card-link">Maceteros</a>
+        </div>
+      </div>
+      </div>
+    
+    </div>
+</div>
+
+
+<div class="container mt-5">
+<div class="row" >
+
+        <div class="bg-success p-2 text-white">Suscribete para recibir ofertas especiales
+          <form class="d-flex">
+
+          <input class="form-control me-2" type="email" placeholder="Correo" aria-label="email">
+          <button class="btn btn-outline-light" type="submit">Suscribete</button>
+        </form>
+      </div>
+</div>
+</div>
+
+      <div class="container">
+
+        <p>
+          <h3>Sobre nosotros</h3>
+          <a href="./articulo/contacto.html"> <class="text">Contacto</class></a>
+          <a href="./articulo/registro.html"> <class="text">Registro a envios</class></a>
+          <a href="./articulo/somos.html"> <class="text">Quienes somos</class></a>
+          
+        </p>
+
+        
+      </div>
 
       </section>
 
