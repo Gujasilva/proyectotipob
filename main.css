@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
@@ -46,4 +47,36 @@ menu button {
 .card:hover{
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%);
+=======
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+/*------------------MENU----------------*/
+
+#menu a {
+    font-size: 18px;
+    font-weight:bold;
+    color: black;
+}
+
+menu button {
+    font-size: 18px;
+    font-weight:bold;
+}
+
+/*------------SLIDERS DE IMAGENES---------*/
+
+.carousel-inner {
+    max-height: 25rem;;
+}
+
+.slide {
+    margin-top: 10px;
+}
+
+.slide img {
+    height: 65vh;
+>>>>>>> ecd99ba3fa7045d2f1cb622049c9197ce9ad9eeb
 }
