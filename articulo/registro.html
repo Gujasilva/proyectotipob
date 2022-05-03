@@ -24,14 +24,15 @@
         </p>
     </header>
 
-    <!--jQuery-->
+    <!--jQuery -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $('#errorName').hide();
             $('#errores').hide();
             var msg="";
-            $("#miForm").submit(function(){
+            $("#formularioRegistro").submit(function(){
                 //valido que nombre tenga valor
                 if($("#nombre").val().trim().length==0){
                     msg="El nombre esta en blanco!!"
@@ -56,7 +57,11 @@
                 msg="";
             })
         });
-    </script>
+    </script> 
+
+  
+
+
 </head>
 
 
@@ -149,68 +154,86 @@
         </button>
       </div>
 
-      <section class="w-30 mx-auto text-center pt-5" id="intro">  <!--pt-5 es el borde arriba(top) entre el texto y el slider/remarcado con linea-->
-        <!------- mx es para dar MARGEN a (X)ambos lados,--------->
+      <section class="w-30 mx-auto text-center pt-5" id="intro"> 
+       
+       
+        <!------- REGISTRO--------->
+
+
         <h2 class="p-3 fs-2 border-top border-2">  <!--fs = font zise o texto en bt--> 
             <span class="text-light">Registro</span>
            </h2>
 
-           <div class="container text-light">
-            <form class="row g-3">
-                <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-                </div>
-                <div class="col-md-6">
-                  <label for="inputPassword4" class="form-label">Apellido</label>
-                  <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-                </div>
-                <p></p>
-                <div class="col-md-6">
-                    <label for="inputState" class="form-label">Ciudad</label>
-                    <select id="inputCity" class="form-select">
-                      <option selected>Seleccione</option>
-                      <option>Viña del mar</option>
-                      <option>Valparaiso</option>
-                      <option>Region Metropolitana</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="inputCity" class="form-label">Comuna</label>
-                    <input type="text" class="form-control" id="inputComunity" placeholder="Comuna">
-                  </div>
-                  <p></p>
-                <div class="col-6">
-                  <label for="inputAddress" class="form-label">Direccion</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Direccion">
-                </div>
-                <div class="col-6">
-                    <label for="inputAddress" class="form-label">Correo</label>
-                    <input type="email" class="form-control" id="email" placeholder="Correo Electronico">
-                  </div>
-                
-                <p></p> 
+           <form id="formularioRegistro" name="formularioRegistro" class="needs-validation" method="post" novalidate>
 
-                <div class="col-12">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                          Acepto los terminos y condiciones de privacidad.
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="form-check-label" for="flexCheckChecked">
-                          Enviar al correo electronico las ofertas y productos nuevo.
-                        </label>
-                      </div>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-              </form>
+           <div class="container text-light">
+            <form class="row">
+            <div class="col">
+              <label for="nombre" class="form-label">Nombre Completo*</label>
+              <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" required>
+           </div>
+            </form>
+           <br>
+
+           <div class="row">
+
+            <div class="col">
+              <label for="email" class="form-label">Correo*</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="usuario@ejemplo.com" required>
+              <div class="invalid-feedback">
+                Ingresa una direccion de correo electronico valida
+              </div>
             </div>
 
+            <div class="col">
+              <label for="password" class="form-label">Contraseña*</label>
+              <input type="password" class="form-control" name="password" id="password" placeholder="**************" required>
+            </div>
+
+            <div class="row">
+
+              <div class="col">
+                <div class="mb-3">
+                  <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                  <input type="date" name="fechaNacimiento" class="form-control" id="fechaNacimiento" placeholder="dd/mm/aaaa">
+                </div>
+              </div>
+              <br>
+
+              <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Ciudad</label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected disabled value="">Seleccione</option>
+                  <option>Santiago</option>
+                  <option>Viña del Mar</option>
+                  <option>Valparaiso</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid state.
+                </div>
+              </div>
+
+
+              <div class="col">
+                <div class="mb-3">
+                <label for="nombre" class="form-label">Direccion</label>
+              <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Direccion">
+              </div>
+            </div>
+           </div>
+
+
+
+           <div class="mb-3">
+             <div class="form-check">
+               <label for="acuerdoPrivacidad" class="form-check-label"> Estoy de acuerdo con acuerdo de privacidad de mis daros</label>
+               <input type="checkbox" class="form-check-imput" name="acuerdoPrivacidad" id="acuerdoPrivacidad" checked>
+             </div>
+           </div>
+
+           <button class="btn btn-primary" type="submit">Enviar</button>
+
+          </form>
       </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
